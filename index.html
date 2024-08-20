@@ -43,8 +43,20 @@
     <section class="contact">
         <h2>Contact Us</h2>
         <p>Let's start a conversation. Reach out to us today!</p>
-        <p>Email: <a href="mailto:info@latifolia.solutions">info@latifolia.solutions</a></p>
-        <p>Phone: +1 (555) 123-4567</p>
+        <form
+          action="https://formspree.io/f/myzgdrng"
+          method="POST">
+          <label>
+            Your email:
+            <input type="email" name="email">
+          </label>
+          <label>
+            Your message:
+            <textarea name="message"></textarea>
+          </label>
+  <!-- your other form fields go here -->
+          <button type="submit">Send</button>
+        </form>
     </section>
 
     <footer class="footer">
