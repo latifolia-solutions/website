@@ -1,26 +1,45 @@
-body, html {
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
 .header {
     position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url('mtn-laurel.jpg') no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
     text-align: center;
+    color: #fff;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .header-content {
-    position: relative;
-    z-index: 2; /* Ensures text is above the overlay */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .header h1 {
@@ -35,20 +54,61 @@ body, html {
     font-weight: 400;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Adjust opacity here */
-    z-index: 1;
+.about, .services, .contact {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.section {
-    padding: 60px 20px;
-    background-color: #f4f4f4;
-    text-align: center;
+.about h2, .services h2, .contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about p, .contact p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.contact a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
 
 .footer {
@@ -61,4 +121,18 @@ body, html {
 
 .footer p {
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1.2rem;
+    }
+
+    .about h2, .services h2, .contact h2 {
+        font-size: 2rem;
+    }
 }
