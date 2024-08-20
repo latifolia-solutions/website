@@ -10,16 +10,17 @@ body, html {
     width: 100%;
     height: 100vh;
     background: url('mtn-laurel.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
 }
 
 .header-content {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Ensures text is above the overlay */
 }
 
 .header h1 {
@@ -40,7 +41,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2); /* Adjust opacity here */
     z-index: 1;
 }
 
