@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.header {
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+    padding: 50px 20px;
+}
+
+.banner-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.header h1 {
+    margin-top: 20px;
+    font-size: 3rem;
+    color: #ffebcd; /* Light golden color */
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+    color: #fff; /* White */
+}
+
+.about, .services, .contact {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+.about p, .services ul, .contact p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services li {
+    padding: 10px 0;
+}
+
+.contact a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer p {
+    margin: 0;
+}
