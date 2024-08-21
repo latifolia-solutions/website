@@ -11,77 +11,136 @@ body {
 }
 
 /* Header */
-header {
-    background-color: #2b4f3d;
-    padding: 20px;
+.header {
+    position: relative;
     text-align: center;
-    color: #f3d1d1;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
 }
 
 header h1 {
+    font-size: 3rem;
     margin: 0;
-    font-size: 2.5rem;
 }
 
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    background-color: #333333;
+header p {
+    font-size: 1.5rem;
 }
 
-nav a {
-    color: #f3d1d1;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 400;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #f7f0e1;
-}
-
-/* Main Content */
-main {
+/* About Section */
+.about {
     padding: 40px;
     background-color: #ffffff;
     max-width: 1200px;
     margin: auto;
 }
 
-/* Services Section with Grid */
+.about h2 {
+    color: #2b4f3d;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Services Section with Grid and Hover Effects */
 .services {
+    padding: 40px;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.service-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    margin-bottom: 40px;
 }
 
-.service-box {
+.service-item {
     background-color: #f3d1d1;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.service-box:hover {
+.service-item:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.service-box h3 {
+.service-item h3 {
     margin-top: 0;
     color: #2b4f3d;
 }
 
-.service-box p {
+.service-item p {
     color: #333333;
 }
 
-/* Buttons */
-button {
+/* Contact Section */
+.contact {
+    padding: 40px;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact h2 {
+    color: #2b4f3d;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.contact input[type="email"],
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact button {
     background-color: #f3d1d1;
     color: #2b4f3d;
     padding: 10px 20px;
@@ -92,13 +151,13 @@ button {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-button:hover {
+.contact button:hover {
     background-color: #e0bfbf;
     transform: scale(1.05);
 }
 
 /* Footer */
-footer {
+.footer {
     background-color: #2b4f3d;
     padding: 20px;
     text-align: center;
@@ -108,23 +167,27 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    main {
-        padding: 20px;
-    }
-
     header h1 {
         font-size: 2rem;
     }
 
-    nav {
-        flex-direction: column;
-    }
-
-    nav a {
-        margin: 10px 0;
+    header p {
+        font-size: 1.2rem;
     }
 
     .services {
+        padding: 20px;
+    }
+
+    .about {
+        padding: 20px;
+    }
+
+    .contact {
+        padding: 20px;
+    }
+
+    .service-list {
         grid-template-columns: 1fr;
     }
 }
