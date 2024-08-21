@@ -13,6 +13,7 @@ body {
 /* Header */
 .header {
     position: relative;
+    height: 60vh; /* Adjust Image Size */
     text-align: center;
     color: white;
 }
@@ -174,7 +175,11 @@ header p {
     header p {
         font-size: 1.2rem;
     }
-
+    
+    .header {
+        height: 40vh; /* Further reduce the height on smaller screens */
+    }
+    
     .services {
         padding: 20px;
     }
