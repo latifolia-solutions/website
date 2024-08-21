@@ -60,7 +60,7 @@ header p {
 /* About Section */
 .about {
     padding: 40px;
-    background-color: #000000;
+    background-color: #FFFFFF;
     max-width: 1200px;
     margin: auto;
 }
@@ -168,7 +168,7 @@ header p {
 
 /* Footer */
 .footer {
-    background-color: #2b4f3d;
+    background-color: #f7f0e1;
     padding: 20px;
     text-align: center;
     color: #f3d1d1;
