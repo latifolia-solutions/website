@@ -51,15 +51,33 @@ main {
     margin: auto;
 }
 
-main h2 {
-    color: #2b4f3d;
-    margin-bottom: 20px;
-    font-weight: 700;
+/* Services Section with Grid */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
-main p {
-    margin-bottom: 20px;
-    line-height: 1.6;
+.service-box {
+    background-color: #f3d1d1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+}
+
+.service-box h3 {
+    margin-top: 0;
+    color: #2b4f3d;
+}
+
+.service-box p {
+    color: #333333;
 }
 
 /* Buttons */
@@ -104,5 +122,9 @@ footer {
 
     nav a {
         margin: 10px 0;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
     }
 }
