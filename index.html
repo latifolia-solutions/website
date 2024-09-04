@@ -20,7 +20,12 @@
 
     <section class="about" id="about">
         <h2>About Us</h2>
-        <p>At Latifolia Solutions, we drive business growth with cutting-edge technology and strategy. With decades of experience, we deliver tailored technical design, cybersecurity, and innovation advisory services, empowering organizations to excel in a competitive marketplace.</p>
+        <p>At Latifolia Solutions, we specialize in guiding security startups through product strategy and development. Our expertise spans cybersecurity product portfolios, innovative service offerings, and cutting-edge security technology research. With a global client base, we help drive disruptive growth by aligning security solutions with market demands and future trends.</p>
+    </section>
+
+    <section class="expect" id="expect">
+        <h2>What to Expect</h2>
+        <p>Partnering with us means personalized strategies tailored to your unique needs. We collaborate closely with international clients to develop high-impact security products, ensuring you stay ahead in the competitive landscape of cybersecurity innovation.</p>
     </section>
 
     <section class="services" id="services">
@@ -68,7 +73,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            let elements = document.querySelectorAll('.about, .services, .contact');
+            let elements = document.querySelectorAll('.about, .expect, .services, .contact');
             let windowHeight = window.innerHeight;
 
             function checkPosition() {
@@ -81,7 +86,7 @@
             }
 
             window.addEventListener('scroll', checkPosition);
-            checkPosition();
+            checkPosition(); // Check initial position on page load
         });
     </script>
 </body>
