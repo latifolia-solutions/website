@@ -13,71 +13,76 @@
         <img src="mtn-laurel.jpg" alt="Mountain Laurel Banner" class="banner-image">
         <div class="header-content">
             <h1>Latifolia Solutions, LLC</h1>
-            <p>Your Partner in Design and Strategy</p>
+            <p>Empowering businesses with innovation and cybersecurity solutions</p>
+            <a href="#services" class="cta-button">Learn More</a>
         </div>
     </header>
 
-    <section class="about">
+    <section class="about" id="about">
         <h2>About Us</h2>
-        <p>Latifolia Solutions, LLC is a technology consulting firm dedicated to helping businesses differentiate, disrupt competition through innovation, and thrive in a competitive marketplace. With more than 24 years of direct industry experience, we specialize in technical design, strategic thinking, and enterprise cybersecurity solutions.</p>
+        <p>At Latifolia Solutions, we drive business growth with cutting-edge technology and strategy. With decades of experience, we deliver tailored technical design, cybersecurity, and innovation advisory services, empowering organizations to excel in a competitive marketplace.</p>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <h2>Our Services</h2>
         <div class="service-list">
             <div class="service-item">
+                <img src="digital-mtn-laurel.jpg" alt="Technical Design" class="service-image">
                 <h3>Technical Design</h3>
-                <p>We craft bespoke technical solutions to meet your business needs.</p>
+                <p>We craft bespoke technical solutions to optimize your business operations and drive efficiency.</p>
             </div>
             <div class="service-item">
+                <img src="cybersecurity-mtn-laurel.jpg" alt="Cybersecurity Solutions" class="service-image">
                 <h3>Cybersecurity Solutions</h3>
-                <p>Protect your business with our advanced enterprise cybersecurity strategies.</p>
+                <p>Our enterprise-grade cybersecurity strategies protect your business from evolving threats.</p>
             </div>
             <div class="service-item">
+                <img src="innovation-mtn-laurel.jpg" alt="Innovation Advisory" class="service-image">
                 <h3>Innovation Advisory</h3>
-                <p>Stay ahead of the competition with our innovation-driven consulting services.</p>
+                <p>Partner with us to stay ahead of the competition through innovation-driven consulting services.</p>
             </div>
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <h2>Contact Us</h2>
         <p>Let's start a conversation. Reach out to us today!</p>
         <form action="https://formspree.io/f/myzgdrng" method="POST">
-          <label>
-            Your email:
-            <input type="email" name="email" required>
-          </label>
-          <p></p>
-          <label>
+            <label>
+                Your email:
+                <input type="email" name="email" required>
+            </label>
+            <p></p>
+            <label>
                 Message:
                 <textarea name="message" required></textarea>
-          </label>
+            </label>
             <p></p>
-          <button type="submit">Send</button>
+            <button type="submit">Send</button>
         </form>
     </section>
 
     <footer class="footer">
         <p>&copy; 2024 Latifolia Solutions, LLC. All rights reserved.</p>
     </footer>
+
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        let elements = document.querySelectorAll('.about, .services, .contact');
-        let windowHeight = window.innerHeight;
+        document.addEventListener('DOMContentLoaded', function () {
+            let elements = document.querySelectorAll('.about, .services, .contact');
+            let windowHeight = window.innerHeight;
 
-        function checkPosition() {
-            elements.forEach(function (element) {
-                let position = element.getBoundingClientRect().top;
-                if (position < windowHeight - 100) {
-                    element.classList.add('in-view');
-                }
-            });
-        }
+            function checkPosition() {
+                elements.forEach(function (element) {
+                    let position = element.getBoundingClientRect().top;
+                    if (position < windowHeight - 100) {
+                        element.classList.add('in-view');
+                    }
+                });
+            }
 
-        window.addEventListener('scroll', checkPosition);
-        checkPosition(); // Check initial position on page load
-    });
-</script>
+            window.addEventListener('scroll', checkPosition);
+            checkPosition();
+        });
+    </script>
 </body>
 </html>
