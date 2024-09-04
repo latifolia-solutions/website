@@ -39,17 +39,20 @@ body {
     position: relative;
     text-align: center;
     color: white;
-    height: 40vh;
+    height: 50vh; /* Adjust height to be more proportional */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background: url('mtn-laurel.jpg') center center no-repeat;
+    background-size: cover; /* Ensure image scales properly */
 }
 
 .header-content {
     position: relative;
     z-index: 2;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    border-radius: 10px;
 }
 
 .mtn-laurel-small {
@@ -85,7 +88,7 @@ header p {
 }
 
 /* About Section */
-.about {
+.about, .expect {
     padding: 60px 20px;
     background-color: #FFFFFF;
     max-width: 1200px;
@@ -95,19 +98,19 @@ header p {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.about.in-view {
+.about.in-view, .expect.in-view {
     opacity: 1;
     transform: translateY(0);
 }
 
-.about h2 {
+.about h2, .expect h2 {
     color: #2b4f3d;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 2rem;
 }
 
-.about p {
+.about p, .expect p {
     margin-bottom: 20px;
     line-height: 1.6;
 }
