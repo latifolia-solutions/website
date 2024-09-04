@@ -3,7 +3,7 @@
 
 /* Base Styling */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     color: #333333;
     background-color: #f7f0e1;
     margin: 0;
@@ -217,7 +217,7 @@ header p {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .contact button {
