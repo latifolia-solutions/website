@@ -15,12 +15,11 @@ body {
     position: relative;
     text-align: center;
     color: white;
-    height: 70vh; /* Increased banner height */
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('new-banner.jpg') no-repeat center center; /* Higher quality, relevant banner */
-    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .overlay {
@@ -29,20 +28,28 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Subtle gradient */
     z-index: 1;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 .header-content {
     position: relative;
     z-index: 2;
     padding: 20px;
-    text-align: center;
-    color: white;
 }
 
 header h1 {
-    font-size: 3rem; /* Bigger font size for more impact */
+    font-size: 3rem;
     margin: 0;
 }
 
@@ -53,10 +60,18 @@ header p {
 
 /* About Section */
 .about {
-    padding: 60px 20px; /* Increased padding for cleaner look */
+    padding: 60px 20px;
     background-color: #FFFFFF;
     max-width: 1200px;
     margin: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about h2 {
@@ -71,12 +86,20 @@ header p {
     line-height: 1.6;
 }
 
-/* Services Section */
+/* Services Section with Hover and Fade-In Effects */
 .services {
     padding: 60px 20px;
     background-color: #ffffff;
     max-width: 1200px;
     margin: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.services.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .service-list {
@@ -89,6 +112,7 @@ header p {
     background-color: #f3d1d1;
     padding: 20px;
     border-radius: 10px;
+    border: 1px solid #ddd;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -113,6 +137,14 @@ header p {
     background-color: #ffffff;
     max-width: 1200px;
     margin: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contact.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contact h2 {
@@ -147,7 +179,7 @@ header p {
 }
 
 .contact button {
-    background-color: #2b4f3d; /* More distinct color */
+    background-color: #2b4f3d;
     color: white;
     padding: 15px 25px;
     border: none;
@@ -183,6 +215,43 @@ header p {
     }
 
     .header {
-        height: 50vh; /* Adjusted height for mobile */
+        height: 50vh;
     }
 }
+
+/* Scroll-based Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateHere is the continuation of the **style.css** file with the **scroll-based animations** included:
+
+```css
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Animations */
+.about.in-view, .services.in-view, .contact.in-view {
+    animation: fadeIn 1s ease-out;
+}
+
+/* JavaScript for Scroll-Based Animations */
+window.addEventListener('scroll', function() {
+    let elements = document.querySelectorAll('.about, .services, .contact');
+    let windowHeight = window.innerHeight;
+
+    elements.forEach(function(element) {
+        let position = element.getBoundingClientRect().top;
+
+        if (position < windowHeight - 100) {
+            element.classList.add('in-view');
+        }
+    });
+});
