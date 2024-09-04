@@ -15,10 +15,12 @@ body {
     position: relative;
     text-align: center;
     color: white;
-    height: 40vh; /* Reduce the height of the banner */
+    height: 70vh; /* Increased banner height */
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url('new-banner.jpg') no-repeat center center; /* Higher quality, relevant banner */
+    background-size: cover;
 }
 
 .overlay {
@@ -31,35 +33,27 @@ body {
     z-index: 1;
 }
 
-.banner-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
 .header-content {
     position: relative;
     z-index: 2;
     padding: 20px;
-    margin-top: -20px; /* Move the text up slightly */
+    text-align: center;
+    color: white;
 }
 
 header h1 {
-    font-size: 2rem; /* Adjust font size */
+    font-size: 3rem; /* Bigger font size for more impact */
     margin: 0;
 }
 
 header p {
-    font-size: 1rem; /* Adjust font size */
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
 /* About Section */
 .about {
-    padding: 30px;
+    padding: 60px 20px; /* Increased padding for cleaner look */
     background-color: #FFFFFF;
     max-width: 1200px;
     margin: auto;
@@ -69,6 +63,7 @@ header p {
     color: #2b4f3d;
     margin-bottom: 20px;
     font-weight: 700;
+    font-size: 2rem;
 }
 
 .about p {
@@ -76,9 +71,9 @@ header p {
     line-height: 1.6;
 }
 
-/* Services Section with Grid and Hover Effects */
+/* Services Section */
 .services {
-    padding: 40px;
+    padding: 60px 20px;
     background-color: #ffffff;
     max-width: 1200px;
     margin: auto;
@@ -114,7 +109,7 @@ header p {
 
 /* Contact Section */
 .contact {
-    padding: 40px;
+    padding: 60px 20px;
     background-color: #ffffff;
     max-width: 1200px;
     margin: auto;
@@ -124,6 +119,7 @@ header p {
     color: #2b4f3d;
     margin-bottom: 20px;
     font-weight: 700;
+    font-size: 2rem;
 }
 
 .contact p {
@@ -151,34 +147,35 @@ header p {
 }
 
 .contact button {
-    background-color: #f3d1d1;
-    color: #2b4f3d;
-    padding: 10px 20px;
+    background-color: #2b4f3d; /* More distinct color */
+    color: white;
+    padding: 15px 25px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 500;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .contact button:hover {
-    background-color: #e0bfbf;
-    transform: scale(1.05);
+    background-color: #1a3527;
+    transform: scale(1.1);
 }
 
 /* Footer */
 .footer {
-    background-color: #f7f0e1;
-    padding: 20px;
+    background-color: #2b4f3d;
+    color: white;
+    padding: 30px;
+    font-size: 0.9rem;
     text-align: center;
-    color: #f3d1d1;
     margin-top: 40px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     header p {
@@ -186,6 +183,6 @@ header p {
     }
 
     .header {
-        height: 30vh; /* Further reduce the height on smaller screens */
+        height: 50vh; /* Adjusted height for mobile */
     }
 }
