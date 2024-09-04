@@ -11,16 +11,25 @@ body {
 }
 
 /* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2b4f3d;
+    z-index: 3;
+    text-align: center;
+    padding: 10px 0;
+}
+
 .nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #2b4f3d;
+    display: inline-block;
 }
 
 .nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
@@ -36,14 +45,14 @@ body {
 
 /* Header */
 .header {
-    position: relative;
+    margin-top: 50px; /* Add space for the fixed nav */
     text-align: center;
     color: white;
-    height: 40vh; /* Adjusted height for a smaller banner */
+    height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Removed background image */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .mtn-laurel-small {
