@@ -40,56 +40,58 @@
         </ul>
     </nav>
 
-    <div class="header-content">
-        <img src="assets/img/mtn-laurel.jpg" alt="Latifolia Solutions Logo" class="mtn-laurel-small" loading="lazy">
-        <div> <!-- Wrap the h1 and p tags -->
-            <h1>Latifolia Solutions</h1>
-            <p>Empowering Cybersecurity Innovation Through Expert Product Development Consulting</p>
+    <header class="header"> <!-- No Changes to Header -->
+        <div class="header-content">
+            <img src="assets/img/mtn-laurel.jpg" alt="Latifolia Solutions Logo" class="mtn-laurel-small" loading="lazy">
+            <div>
+                <h1>Latifolia Solutions</h1>
+                <p>Empowering Cybersecurity Innovation Through Expert Product Development Consulting</p>
+            </div>
+            <a href="#services" class="cta-button">Explore Our Services</a>
         </div>
-        <a href="#services" class="cta-button">Explore Our Services</a>
-    </div>
+    </header>
 
-    <main> <!-- Added a main element for the main content area -->
-        <section class="about" id="about" aria-labelledby="about-heading"> <!-- Added aria-labelledby to connect section to heading -->
-            <h2 id="about-heading">About Us</h2> <!-- Added id to the heading -->
-            <p>At Latifolia Solutions, we specialize in guiding security startups and established companies through product strategy and development. Our deep expertise spans cybersecurity product portfolios, innovative service offerings, and cutting-edge security technology research. We collaborate with a global client base, driving disruptive growth by aligning security solutions with evolving market demands and future trends.</p> <!--Updated text-->
+    <main>
+        <section class="about" id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Us</h2>
+            <p>At Latifolia Solutions, we specialize in guiding security startups and established companies through product strategy and development. Our deep expertise spans cybersecurity product portfolios, innovative service offerings, and cutting-edge security technology research. We collaborate with a global client base, driving disruptive growth by aligning security solutions with evolving market demands and future trends.</p>
         </section>
 
-        <section class="expect" id="expect" aria-labelledby="expect-heading"> <!-- Added aria-labelledby -->
-            <h2 id="expect-heading">What to Expect</h2> <!-- Added id -->
-            <p>Partnering with Latifolia Solutions means gaining access to personalized strategies meticulously tailored to your unique needs. We work closely with international clients to develop high-impact security products, ensuring you maintain a competitive edge in the dynamic landscape of cybersecurity innovation. Expect tailored insights, strategic guidance, and tangible results.</p> <!--Updated text-->
+        <section class="expect" id="expect" aria-labelledby="expect-heading">
+            <h2 id="expect-heading">What to Expect</h2>
+            <p>Partnering with Latifolia Solutions means gaining access to personalized strategies meticulously tailored to your unique needs. We work closely with international clients to develop high-impact security products, ensuring you maintain a competitive edge in the dynamic landscape of cybersecurity innovation. Expect tailored insights, strategic guidance, and tangible results.</p>
         </section>
 
-        <section class="services" id="services" aria-labelledby="services-heading"> <!-- Added aria-labelledby -->
-            <h2 id="services-heading">Our Services</h2> <!-- Added id -->
+        <section class="services" id="services" aria-labelledby="services-heading">
+            <h2 id="services-heading">Our Services</h2>
             <div class="service-list">
                 <div class="service-item">
-                    <img src="assets/img/digital-mtn-laurel.jpg" alt="Technical Design Solutions" class="service-image" loading="lazy"> <!-- Updated alt attribute -->
+                    <img src="assets/img/digital-mtn-laurel.jpg" alt="Technical Design Solutions" class="service-image" loading="lazy">
                     <h3>Technical Design</h3>
-                    <p>We craft bespoke technical solutions to optimize your business operations and drive efficiency. From architecture to implementation, we ensure your technology aligns with your strategic goals.</p> <!--Updated text-->
+                    <p>We craft bespoke technical solutions to optimize your business operations and drive efficiency. From architecture to implementation, we ensure your technology aligns with your strategic goals.</p>
                 </div>
                 <div class="service-item">
-                    <img src="assets/img/cybersecurity-mtn-laurel.jpg" alt="Comprehensive Cybersecurity Solutions" class="service-image" loading="lazy"> <!-- Updated alt attribute -->
+                    <img src="assets/img/cybersecurity-mtn-laurel.jpg" alt="Comprehensive Cybersecurity Solutions" class="service-image" loading="lazy">
                     <h3>Cybersecurity Solutions</h3>
-                    <p>Our enterprise-grade cybersecurity strategies safeguard your business from evolving threats. We implement robust security measures to protect your valuable assets and ensure compliance with industry regulations.</p> <!--Updated text-->
+                    <p>Our enterprise-grade cybersecurity strategies safeguard your business from evolving threats. We implement robust security measures to protect your valuable assets and ensure compliance with industry regulations.</p>
                 </div>
                 <div class="service-item">
-                    <img src="assets/img/innovation-mtn-laurel.jpg" alt="Strategic Innovation Advisory Services" class="service-image" loading="lazy"> <!-- Updated alt attribute -->
+                    <img src="assets/img/innovation-mtn-laurel.jpg" alt="Strategic Innovation Advisory Services" class="service-image" loading="lazy">
                     <h3>Innovation Advisory</h3>
-                    <p>Partner with Latifolia Solutions to stay ahead of the competition through innovation-driven consulting services. We provide actionable insights and strategies to help you develop groundbreaking cybersecurity products and solutions.</p> <!--Updated text-->
+                    <p>Partner with Latifolia Solutions to stay ahead of the competition through innovation-driven consulting services. We provide actionable insights and strategies to help you develop groundbreaking cybersecurity products and solutions.</p>
                 </div>
             </div>
         </section>
 
-        <section class="contact" id="contact" aria-labelledby="contact-heading"> <!-- Added aria-labelledby -->
-            <h2 id="contact-heading">Contact Us</h2> <!-- Added id -->
-            <p>Ready to elevate your cybersecurity product development? Let's start a conversation. Reach out to us today!</p> <!--Updated text-->
+        <section class="contact" id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Us</h2>
+            <p>Ready to elevate your cybersecurity product development? Let's start a conversation. Reach out to us today!</p>
             <form action="https://formspree.io/f/myzgdrng" method="POST">
-                <label for="email">Your email:</label> <!-- Added "for" attribute for accessibility -->
-                <input type="email" id="email" name="email" required> <!-- Added id attribute for accessibility -->
-                <label for="message">Message:</label> <!-- Added "for" attribute for accessibility -->
-                <textarea id="message" name="message" required></textarea> <!-- Added id attribute for accessibility -->
-                <button type="submit">Send Message</button> <!-- Updated button text -->
+                <label for="email">Your email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
         </section>
     </main>

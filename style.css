@@ -138,14 +138,13 @@ a:hover {
   overflow: hidden;
 }
 
-.header::before {
+.header::before { /* REMOVE this code  */
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('assets/img/mtn-laurel.jpg'); /* Remember to replace with your image */
   background-size: cover;
   background-position: center;
   opacity: 0.4;
@@ -163,24 +162,37 @@ a:hover {
 }
 
 .header-content {
-    display: flex;
-    align-items: center; /* Vertically align items */
-    text-align: left; /* Align text to the left */
-    padding: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*Center the Items*/
+  padding: 20px;
+  text-align: center; /*Center the Text*/
+}
+
+/*Style The Text next to each other*/
+.header-content div{
+    display:flex;
+    flex-direction:column;
+}
   
-  .header-content img {
-    margin-right: 20px; /* Space between logo and text */
-  }
-  
-  .header-content h1,
-  .header-content p {
-    margin: 0;
-  }
-  
-  .header-content {
-    flex-direction: column;  /*Stack when small*/
-  }
+
+/*Style the container*/
+.header-content > * {
+    margin:5px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
 
 /* -------------------------------------------------------------------------- */
 /* Call to Action Button */
