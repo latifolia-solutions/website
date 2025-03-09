@@ -384,6 +384,11 @@ pre {
   text-align: center;
 }
 
+.footer a {
+    color: var(--highlight-color); /* Or another appropriate color */
+    text-decoration: underline; /* Optional: Add underline for clarity */
+  }
+
 /* -------------------------------------------------------------------------- */
 /* Media Queries */
 /* -------------------------------------------------------------------------- */
