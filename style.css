@@ -1,4 +1,4 @@
-/* Modernized CSS */
+/* Modernized CSS - Font Focused */
 
 /* -------------------------------------------------------------------------- */
 /* Imports & Variables */
@@ -13,24 +13,28 @@
   padding: 0;
 }
 
-body {
-  line-height: 1.5;
-  font-family: sans-serif;
-}
-
 img {
   max-width: 100%;
   display: block;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Roboto+Slab:wght@400;700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+/* Google Font Imports (Centralized) */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap');
+
+/* -------------------------------------------------------------------------- */
+/* Root Variables - Centralized Configuration */
+/* -------------------------------------------------------------------------- */
 
 :root {
   /* Primary Colors - Existing */
   --primary-color: #2b4f3d;
   --secondary-color: #f7f0e1;
 
-  /* Accent Colors - New */
+  /* Accent Colors */
   --accent-color: #6c757d;
   --highlight-color: #a8dadc;
 
@@ -39,17 +43,19 @@ img {
   --body-color: #666;
   --white: #fff;
 
-  /* Font Stack */
-  --primary-font: 'Roboto Slab', serif;
-  --body-font: 'DM Sans', sans-serif;
+  /* Font Management (Centralized) */
+  --heading-font: 'Plus Jakarta Sans', sans-serif;  /* Modern, clean headings */
+  --body-font: 'Plus Jakarta Sans', sans-serif;    /* Clean, readable body text */
+  --code-font: 'Fira Code', monospace;         /* For code snippets */
+
+  /* Font Sizes (Consider using REM for better accessibility) */
+  --base-font-size: 16px; /* Adjust this for overall scaling */
+  --heading-font-size: 2.5rem; /* h2 headings */
+  --body-font-size: 1rem;      /* Standard body text */
 
   /* Spacing */
   --section-padding: 60px 20px;
   --border-radius: 5px;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -64,6 +70,7 @@ body,
 
 body {
   font-family: var(--body-font);
+  font-size: var(--base-font-size);
   color: var(--body-color);
   background-color: var(--secondary-color);
   line-height: 1.6;
@@ -85,6 +92,39 @@ a {
 a:hover {
   color: var(--highlight-color);
   text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Typography */
+/* -------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  font-weight: 600; /* Adjust as needed */
+  line-height: 1.2;
+  margin-bottom: 0.75em;
+}
+
+h2 {
+    font-size: var(--heading-font-size); /* Using the variable */
+}
+
+p {
+  font-size: var(--body-font-size);
+  margin-bottom: 1.25em;
+}
+
+code, pre {
+  font-family: var(--code-font);
+  background-color: #f4f4f4;
+  padding: 0.25em 0.5em;
+  border-radius: var(--border-radius);
+}
+
+pre {
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    padding: 1em;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -175,7 +215,7 @@ a:hover {
 .header h1 {
   font-size: 3rem;
   margin: 0;
-  font-family: var(--primary-font);
+  font-family: var(--heading-font);
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -242,8 +282,8 @@ a:hover {
   color: var(--primary-color);
   margin-bottom: 25px;
   font-weight: 700;
-  font-size: 2.5rem;
-  font-family: var(--primary-font);
+  font-size: var(--heading-font-size);
+  font-family: var(--heading-font);
 }
 
 .about p,
