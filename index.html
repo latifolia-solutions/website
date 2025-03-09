@@ -32,7 +32,7 @@
     <meta property="og:type" content="website">
 </head>
 <body>
-    <nav class="nav" aria-label="Main Navigation"> <!-- Added aria-label for screen reader users -->
+    <nav class="nav" aria-label="Main Navigation" role="navigation">
         <ul>
             <li><a href="#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
@@ -40,7 +40,7 @@
         </ul>
     </nav>
 
-    <header class="header"> <!-- No Changes to Header -->
+    <header class="header">
         <div class="header-content">
             <img src="assets/img/mtn-laurel.jpg" alt="Latifolia Solutions Logo" class="mtn-laurel-small" loading="lazy">
             <div>
@@ -51,18 +51,18 @@
         </div>
     </header>
 
-    <main>
-        <section class="about" id="about" aria-labelledby="about-heading">
+    <main role="main">
+        <section class="about" id="about" aria-labelledby="about-heading" role="region">
             <h2 id="about-heading">About Us</h2>
             <p>At Latifolia Solutions, we specialize in guiding security startups and established companies through product strategy and development. Our deep expertise spans cybersecurity product portfolios, innovative service offerings, and cutting-edge security technology research. We collaborate with a global client base, driving disruptive growth by aligning security solutions with evolving market demands and future trends.</p>
         </section>
 
-        <section class="expect" id="expect" aria-labelledby="expect-heading">
+        <section class="expect" id="expect" aria-labelledby="expect-heading" role="region">
             <h2 id="expect-heading">What to Expect</h2>
             <p>Partnering with Latifolia Solutions means gaining access to personalized strategies meticulously tailored to your unique needs. We work closely with international clients to develop high-impact security products, ensuring you maintain a competitive edge in the dynamic landscape of cybersecurity innovation. Expect tailored insights, strategic guidance, and tangible results.</p>
         </section>
 
-        <section class="services" id="services" aria-labelledby="services-heading">
+        <section class="services" id="services" aria-labelledby="services-heading" role="region">
             <h2 id="services-heading">Our Services</h2>
             <div class="service-list">
                 <div class="service-item">
@@ -83,7 +83,7 @@
             </div>
         </section>
 
-        <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <section class="contact" id="contact" aria-labelledby="contact-heading" role="region">
             <h2 id="contact-heading">Contact Us</h2>
             <p>Ready to elevate your cybersecurity product development? Let's start a conversation. Reach out to us today!</p>
             <form action="https://formspree.io/f/myzgdrng" method="POST">
@@ -96,7 +96,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <p>© 2024 Latifolia Solutions, LLC. All rights reserved.</p>
     </footer>
 
