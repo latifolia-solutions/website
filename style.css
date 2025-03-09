@@ -384,9 +384,13 @@ pre {
   text-align: center;
 }
 
-.footer a {
+.footer a .fab.fa-linkedin {
     color: var(--highlight-color); /* Or another appropriate color */
-    text-decoration: underline; /* Optional: Add underline for clarity */
+    font-size: 2.2em; /* Adjust the size as needed */
+  }
+  
+.footer a:hover .fab.fa-linkedin {
+    color: #0A66C2; /* LinkedIn Blue on hover */
   }
 
 /* -------------------------------------------------------------------------- */
