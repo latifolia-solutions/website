@@ -68,6 +68,10 @@ body,
   margin: 0;
 }
 
+.nav {
+    background-color: transparent
+}
+
 body {
   font-family: var(--body-font);
   font-size: var(--base-font-size);
@@ -252,6 +256,10 @@ pre {
 /* Sections: About, Services, Expect, Contact */
 /* -------------------------------------------------------------------------- */
 
+.about, .contact, .expect, .services {
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Added easing */
+}
+
 .about,
 .contact,
 .expect,
@@ -387,6 +395,7 @@ pre {
 .footer a .fab.fa-linkedin {
     color: var(--highlight-color); /* Or another appropriate color */
     font-size: 2.2em; /* Adjust the size as needed */
+    vertical-align: middle;
   }
   
 .footer a:hover .fab.fa-linkedin {
