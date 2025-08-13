@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Adopt original palette from static site */
+:root {
+  --primary-color: #2b4f3d; /* deep green */
+  --secondary-color: #f7f0e1; /* beige background */
+  --accent-color: #6c757d; /* gray */
+  --highlight-color: #a8dadc; /* light teal */
+  --heading-color: #333333;
+  --body-color: #666666;
+  --white: #ffffff;
+}
+
+html, body { height: 100%; }
+
+body {
+  background: var(--secondary-color);
+  color: var(--body-color);
+}
+
+/* Utility classes matching legacy styling */
+.bg-primary { background-color: var(--primary-color); }
+.bg-secondary { background-color: var(--secondary-color); }
+.text-heading { color: var(--heading-color); }
+.text-body { color: var(--body-color); }
+.text-contrast { color: var(--white); }
+.text-accent { color: var(--accent-color); }
+.border-accent { border-color: var(--highlight-color); }
+.bg-accent { background-color: var(--highlight-color); }
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+.btn-primary:hover { filter: brightness(0.9); }
+
+.card {
+  background-color: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
+}
+
