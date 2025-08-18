@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://latifolia.solutions/'),
+  metadataBase: new URL('https://latifolia.solutions'),
   title: {
     default: 'Latifolia Solutions – Cybersecurity & AI Security Product Consulting',
     template: '%s | Latifolia Solutions'
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'secure software architecture',
     'security startup consulting'
   ],
-  alternates: { canonical: new URL('/', 'https://latifolia.solutions/') as unknown as string },
+  alternates: { canonical: '/' },
   icons: {
     icon: [
       { url: '/assets/img/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
