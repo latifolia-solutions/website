@@ -1,7 +1,7 @@
 {
-  "/manifest.webmanifest/route": "/manifest.webmanifest",
   "/_not-found/page": "/_not-found",
-  "/sitemap.xml/route": "/sitemap.xml",
+  "/manifest.webmanifest/route": "/manifest.webmanifest",
   "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
   "/page": "/"
 }
