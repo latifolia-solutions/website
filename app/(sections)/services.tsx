@@ -1,6 +1,4 @@
-'use client'
 import Image from 'next/image'
-import { useEffect, useRef } from 'react'
 
 const services = [
   {
@@ -35,28 +33,7 @@ const services = [
   },
 ]
 
-function useScrollAnimate(ref: React.RefObject<HTMLElement | null>) {
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add('is-visible')
-          observer.unobserve(el)
-        }
-      },
-      { threshold: 0.15 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [ref])
-}
-
 function ServiceRow({ service }: { service: (typeof services)[0] }) {
-  const textRef = useRef<HTMLDivElement>(null)
-  useScrollAnimate(textRef as React.RefObject<HTMLElement>)
-
   const imagePanel = (
     <div
       className="relative overflow-hidden"
@@ -74,7 +51,6 @@ function ServiceRow({ service }: { service: (typeof services)[0] }) {
 
   const textPanel = (
     <div
-      ref={textRef}
       data-animate
       className="flex flex-col justify-center"
       style={{

@@ -43,16 +43,9 @@ export function Footer() {
           </p>
           <Link
             href="https://www.linkedin.com/company/latifolia-solutions/"
-            className="eyebrow transition-colors hover:opacity-100"
-            style={{ color: 'rgba(247, 240, 225, 0.6)' }}
+            className="eyebrow text-[rgba(247,240,225,0.6)] transition-colors hover:text-[var(--teal)] hover:opacity-100"
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={(e) => {
-              ;(e.currentTarget as HTMLAnchorElement).style.color = 'var(--teal)'
-            }}
-            onMouseLeave={(e) => {
-              ;(e.currentTarget as HTMLAnchorElement).style.color = 'rgba(247, 240, 225, 0.6)'
-            }}
           >
             LinkedIn
           </Link>

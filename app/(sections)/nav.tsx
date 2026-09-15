@@ -52,19 +52,7 @@ export function Nav() {
             <li key={label}>
               <a
                 href={`#${label.toLowerCase()}`}
-                className="eyebrow transition-colors duration-200"
-                style={{
-                  color: 'var(--cream)',
-                  opacity: 0.75,
-                }}
-                onMouseEnter={(e) => {
-                  ;(e.currentTarget as HTMLAnchorElement).style.color = 'var(--teal)'
-                  ;(e.currentTarget as HTMLAnchorElement).style.opacity = '1'
-                }}
-                onMouseLeave={(e) => {
-                  ;(e.currentTarget as HTMLAnchorElement).style.color = 'var(--cream)'
-                  ;(e.currentTarget as HTMLAnchorElement).style.opacity = '0.75'
-                }}
+                className="eyebrow text-[var(--cream)] opacity-75 transition-colors duration-200 hover:text-[var(--teal)] hover:opacity-100"
               >
                 {label}
               </a>

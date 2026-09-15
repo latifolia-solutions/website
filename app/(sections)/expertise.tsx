@@ -1,6 +1,3 @@
-'use client'
-import { useEffect, useRef } from 'react'
-
 const expertiseItems = [
   {
     number: '01',
@@ -28,51 +25,18 @@ const expertiseItems = [
   },
 ]
 
-function useScrollAnimateAll(refs: React.RefObject<HTMLElement | null>[]) {
-  useEffect(() => {
-    const observers = refs.map((ref, i) => {
-      const el = ref.current
-      if (!el) return null
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            // Stagger each item
-            setTimeout(() => el.classList.add('is-visible'), i * 100)
-            observer.unobserve(el)
-          }
-        },
-        { threshold: 0.1 }
-      )
-      observer.observe(el)
-      return observer
-    })
-    return () => observers.forEach((obs) => obs?.disconnect())
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-}
-
 function ExpertiseRow({
   item,
   isLast,
-  animateRef,
 }: {
   item: (typeof expertiseItems)[0]
   isLast: boolean
-  animateRef: React.RefObject<HTMLDivElement>
 }) {
   return (
     <>
       <div
-        ref={animateRef}
         data-animate
-        className="group flex items-start gap-8 py-8 cursor-default"
-        style={{ transition: 'padding-left 0.3s cubic-bezier(0.16, 1, 0.3, 1)' }}
-        onMouseEnter={(e) => {
-          ;(e.currentTarget as HTMLDivElement).style.paddingLeft = '1rem'
-        }}
-        onMouseLeave={(e) => {
-          ;(e.currentTarget as HTMLDivElement).style.paddingLeft = '0'
-        }}
+        className="flex items-start gap-8 py-8 cursor-default pl-0 transition-[padding-left] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:pl-4"
       >
         {/* Large display number */}
         <div
@@ -135,13 +99,6 @@ function ExpertiseRow({
 }
 
 export function Expertise() {
-  const ref0 = useRef<HTMLDivElement>(null)
-  const ref1 = useRef<HTMLDivElement>(null)
-  const ref2 = useRef<HTMLDivElement>(null)
-  const ref3 = useRef<HTMLDivElement>(null)
-  const rowRefs = [ref0, ref1, ref2, ref3]
-  useScrollAnimateAll(rowRefs as unknown as React.RefObject<HTMLElement | null>[])
-
   return (
     <section id="expertise" className="section-cream py-24">
       <div className="container">
@@ -171,7 +128,6 @@ export function Expertise() {
               key={item.number}
               item={item}
               isLast={i === expertiseItems.length - 1}
-              animateRef={rowRefs[i] as React.RefObject<HTMLDivElement>}
             />
           ))}
         </div>

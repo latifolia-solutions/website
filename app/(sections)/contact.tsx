@@ -69,17 +69,10 @@ export function Contact() {
                   type="email"
                   required
                   placeholder="you@company.com"
-                  className="border-b bg-transparent py-3 text-base outline-none transition-colors placeholder:opacity-40 focus:outline-none"
+                  className="border-b border-[var(--cream-dark)] bg-transparent py-3 text-base outline-none transition-colors placeholder:opacity-40 focus:border-[var(--teal-deep)] focus:outline-none"
                   style={{
-                    borderColor: 'var(--cream-dark)',
                     color: 'var(--text-primary)',
                     fontFamily: "'DM Sans', sans-serif",
-                  }}
-                  onFocus={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--teal-deep)'
-                  }}
-                  onBlur={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--cream-dark)'
                   }}
                 />
               </div>
@@ -98,17 +91,10 @@ export function Contact() {
                   name="message"
                   required
                   placeholder="What are you building?"
-                  className="min-h-36 resize-none border-b bg-transparent py-3 text-base outline-none transition-colors placeholder:opacity-40 focus:outline-none"
+                  className="min-h-36 resize-none border-b border-[var(--cream-dark)] bg-transparent py-3 text-base outline-none transition-colors placeholder:opacity-40 focus:border-[var(--teal-deep)] focus:outline-none"
                   style={{
-                    borderColor: 'var(--cream-dark)',
                     color: 'var(--text-primary)',
                     fontFamily: "'DM Sans', sans-serif",
-                  }}
-                  onFocus={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--teal-deep)'
-                  }}
-                  onBlur={(e) => {
-                    e.currentTarget.style.borderColor = 'var(--cream-dark)'
                   }}
                 />
               </div>
