@@ -931,3 +931,13 @@ body:after {
     line-height: 2.5rem;
   }
 }
+
+/* Narrow screens: logo-only brand so the nav links fit on one line */
+@media (max-width: 479px) {
+  nav a > span {
+    display: none;
+  }
+  nav ul {
+    gap: 1.25rem;
+  }
+}
