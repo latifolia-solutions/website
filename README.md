@@ -1,38 +1,27 @@
-# Latifolia Solutions Website (Static Next.js)
+# Latifolia Solutions Website
 
-[![Build and Deploy](https://github.com/latifolia-solutions/website/actions/workflows/deploy.yml/badge.svg)](https://github.com/latifolia-solutions/website/actions/workflows/deploy.yml)
 [![Workflow Security](https://github.com/latifolia-solutions/website/actions/workflows/zizmor.yml/badge.svg)](https://github.com/latifolia-solutions/website/actions/workflows/zizmor.yml)
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs&logoColor=white)](https://nextjs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 
-Static Next.js + TypeScript + Tailwind site exported to `docs/` for GitHub Pages. No server-side code.
+Single-page static site served by GitHub Pages. No framework, no dependencies.
 
-## Develop
+## Layout
 
-```bash
-npm install
-npm run dev
-```
+- `src/` – editable sources: `index.html`, `404.html`, `style.css`
+- `docs/` – what GitHub Pages serves: built pages plus static assets, `robots.txt`, `sitemap.xml`, `manifest.webmanifest`, `CNAME`
+- `build.sh` – inlines `src/style.css` into each page and minifies it into `docs/`
 
-## Build and Export
+## Edit
 
-```bash
-npm run build
-npm run export
-```
+1. Change files in `src/`. Styles are plain CSS; the utility class names already used are defined in `style.css`, new ones must be added there.
+2. Run `./build.sh` (needs `python3` and `npx`).
+3. Commit `src/` and `docs/` together.
 
-Outputs static site to `docs/` and copies `CNAME` and `assets/`. Includes `.nojekyll`.
+Preview locally with `python3 -m http.server -d docs`.
+
+## Images
+
+Photos are WebP at display sizes (`*-640/1024.webp`, `mtn-laurel-500/1000.webp`, `mtn-laurel-64.webp`). `digital-mtn-laurel.jpg` is kept only as the social preview image.
 
 ## GitHub Pages
 
-- Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main` / folder: `/docs`.
-
-## SEO
-
-- Metadata in `app/layout.tsx`
-- Robots: `app/robots.ts`
-- Sitemap: `app/sitemap.ts`
-
-Existing content adapted from [`https://latifolia.solutions/`](https://latifolia.solutions/).
-
+Settings → Pages → Deploy from a branch → `main` / `/docs`.
