@@ -17,7 +17,7 @@ jobs:
           persist-credentials: false
       - name: Install ratchet
         id: install-ratchet
-        uses: jaxxstorm/action-install-gh-release@1e02892ca46fae0062342f787ed9d6dae25aedae
+        uses: jaxxstorm/action-install-gh-release@b82b2052fdf822192f2119b7e289a6f63e668bc8
         with:
           repo: sethvargo/ratchet
           tag: latest
